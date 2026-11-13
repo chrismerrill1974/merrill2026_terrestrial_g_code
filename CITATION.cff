@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the paper and its source revision."
+title: "A Terrestrial Test of Radial Dimensionality Theory: Source-Mass Density Dependence of Newton's Constant"
+version: "v3"
+authors:
+  - family-names: Merrill
+    given-names: Christopher K.
+  - name: "Claude (Anthropic)"
+  - name: "Astra (Open AI)"

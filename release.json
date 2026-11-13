@@ -1,0 +1,14 @@
+{
+  "version": "v3",
+  "works": [
+    "terrestrial"
+  ],
+  "scientific_input_commit": "f4cff7fbcbd795e876c2e0232dbde5a73637a9d7",
+  "capsule_sha256": "a5cc85e0b7599d6e43a64afa627461f2911020970b7e1461e2dd5cf80b2e3135",
+  "manuscripts": {
+    "terrestrial": "reproduction/paper6/terrestrial_G_note/note_terrestrial_G_v2.tex"
+  },
+  "pdfs": {
+    "terrestrial": "reproduction/output/pdf/publication/terrestrial/merrill_rdt_terrestrial_G_v3.pdf"
+  }
+}

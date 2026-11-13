@@ -1,0 +1,202 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs}
+\usepackage[hidelinks]{hyperref}
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\setlength{\emergencystretch}{2em}
+\newcommand{\Mpl}{M_{\rm Pl}}
+\newcommand{\GN}{G_N}
+\begin{document}
+\title{A Terrestrial Test of Radial Dimensionality Theory: Source-Mass Density Dependence of Newton's Constant}
+\author{Christopher K. Merrill\\\small Independent Researcher\\[1ex]
+Claude (Anthropic)\\\small Large Language Model, Computational Collaboration\\[1ex]
+Astra (Open AI)\\\small Large Language Model, Computational Collaboration}
+\date{Consistency revision: November 12, 2026}
+\maketitle
+\begin{abstract}
+We separate a proposed density-dependent Poisson law from Paper VI's
+scalar action, whose claimed equilibrium fails a source-sign check. The
+Poisson ansatz still defines conditional laboratory force predictions.
+We correct the uncertainty units in a retained NIST comparison and propagate
+the published four-result covariance. We withdraw the cross-experiment
+amplitude thresholds: the assigned single density for a mixed-material
+consensus, apparatus confounding and interval construction do not support
+those bounds. The resulting material contrasts are diagnostics, not an RDT
+detection or a calibrated amplitude exclusion.
+\end{abstract}
+
+\section*{Version note: v3}
+This version retains the published title and a testable laboratory proposal. Source-density dependence is a separately specified phenomenological force-law ansatz, not a derivation from the failed action in Paper VI. The revision corrects NIST uncertainty units and covariance propagation and withdraws unsupported cross-experiment amplitude bounds. Retained measurement contrasts are descriptive diagnostics, not a detection or calibrated bound.
+
+
+\section{Specified phenomenological force model}
+Adopt, as a separate hypothesis,
+\begin{equation}
+ \nabla^2\Phi=4\pi\GN\frac{\rho}{1-\sigma(\rho)},\qquad
+ \sigma(\rho)=A\frac{x}{1+x},\quad x=(\rho/\rho_0)^\alpha.
+\end{equation}
+For an isolated uniform spherical source of mass $M$ and radius $R$, with
+ordinary test acceleration $-\nabla\Phi$, integration gives
+\begin{equation}
+ \Phi'(r)=\frac{\GN M}{[1-\sigma(\rho_s)]r^2},\qquad r>R.
+\end{equation}
+Spherical symmetry is required for this inverse-square monopole form.
+An arbitrary apparatus needs its geometry integrated; an inhomogeneous body
+has weighted source charge $\int \rho/[1-\sigma(\rho)]\,d^3x$.
+Zero local exterior density does not erase this integrated charge.
+The exact two-uniform-material ratio and its first-order approximation are
+\begin{equation}
+ D_{12}=\frac{G_1}{G_2}-1
+ =\frac{\sigma_1-\sigma_2}{1-\sigma_1}
+ =\sigma_1-\sigma_2+O(A^2).
+\end{equation}
+Only the leading expression scales exactly linearly with $A$.
+For illustrative densities 19.3 and $2.7\,{\rm g\,cm^{-3}}$, $\rho_0=150$
+and fixed $A=0.0087$, the retained script gives:
+\begin{center}
+\input{material_table.tex}
+\end{center}
+These are chosen model inputs, not measured material properties or points
+on the alpha-dependent solar threshold.
+
+The ansatz specifies an active-source force calculation. It does not supply
+a self-consistent passive/inertial mass law, scalar surface matching or a
+momentum-conserving two-body action. For unequal density factors, blindly
+assigning ordinary passive masses to both bodies gives unequal mutual forces;
+additional physics would be needed to close that model. A source/test-body
+configuration can still test the stated force prescription, with its scope
+explicit. It is not derived by Paper VI's audited action or by the full RDT
+operator.
+
+\section{Solar comparison and model distinction}
+The canonical operator-model scan~\cite{Series_paper1} uses $\rho_0=150\,{\rm g\,cm^{-3}}$
+and $\alpha\in[0.02,0.5]$. Its nominal solar proxy threshold, denoted
+$A_{\rm lim}$, has a sampled and locally refined amplitude peak
+$A=0.0087502019$ at $\alpha=0.1244971139$ (asymptote $3-3A=2.973749394$).
+It has neither calibrated confidence coverage nor a certified continuous
+maximum. Changing the physical response requires a new solar comparison;
+sharing a density-law shape does not transfer this threshold.
+
+In particular, an illustrative $A=0.0087$ is not a bound on the terrestrial
+ansatz. Paper VI's specified increasing potential~\cite{Series_paper6} fails its positive-density
+adiabatic equilibrium condition, so its former screening argument cannot
+justify neglecting apparatus or surface effects here. The old scalar-tensor
+companion~\cite{Series_companion} is another distinct construction. This note does not repair either
+action by fitting laboratory data.
+
+\section{Published NIST table and corrected uncertainties}
+The final published PDF of Ref.~\cite{NIST}, Table 16, gives the following
+four results. The uncertainty column is relative standard uncertainty in
+ppm; the former notation such as $6.673642(23)$ incorrectly treated ppm
+as last-digit errors.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+Configuration & $G/(10^{-11}\,{\rm m^3\,kg^{-1}\,s^{-2}})$ & $u_r$ (ppm)\\
+\midrule
+Copper, servo & 6.673642 & 23\\
+Copper, free & 6.674021 & 30\\
+Sapphire, servo & 6.672637 & 38\\
+Sapphire, free & 6.673636 & 94\\
+\bottomrule
+\end{tabular}
+\end{center}
+Table 18 provides the less-rounded uncertainties
+$(23.2,30.3,37.5,93.9)$ ppm and correlation matrix
+\begin{equation}
+ C=\begin{pmatrix}
+ 1&.42&.38&.12\\ .42&1&.23&.23\\ .38&.23&1&.25\\ .12&.23&.25&1
+ \end{pmatrix}.
+\end{equation}
+The published consensus is $6.67387\pm0.00038$ in the same units.
+It combines materials and has no unique source density. We use the final
+PDF rather than the conflicting NIST landing-page abstract.
+
+For contrast vector $c$, set $\Sigma_{ij}=u_i u_jC_{ij}$ and calculate
+$c^TG$ and $\sqrt{c^T\Sigma c}$. Dividing both by a fixed reference
+$G_{\rm ref}=6.6737\times10^{-11}$ gives the following descriptive ppm
+contrasts; this normalization is not a fit parameter.
+\begin{center}
+\input{contrast_table.tex}
+\end{center}
+These uncertainties propagate the published measurement budget only; they
+do not include fitted configuration biases or the authors' additional dark
+uncertainty. They must not be read as detection significances. Both material
+contrasts are positive, but fixed-material method contrasts are comparable.
+The source discusses unresolved offsets and configuration-specific biases;
+it does not identify their cause conclusively. The earlier claim that it
+established composition was not the cause is withdrawn.
+
+\section{Why the earlier regression is not an amplitude bound}
+The preserved \texttt{g\_regression\_v2.py} fits
+$G_i=a+b\,x_i/(1+x_i)$, reports $A=b/a$, inflates an approximate error by
+a constant-model Birge ratio and forms
+$\max(\widehat A,0)+1.645u_A$. This is an exploratory recipe, not a
+coverage-calibrated construction at a physical boundary. Its $u_A$ also
+omits intercept uncertainty and slope--intercept covariance in the ratio.
+A delta-method variance would contain
+\begin{equation}
+ \operatorname{Var}(b/a)\simeq
+ \frac{\operatorname{Var}b}{a^2}
+ +\frac{b^2\operatorname{Var}a}{a^4}
+ -\frac{2b\operatorname{Cov}(a,b)}{a^3}.
+\end{equation}
+Fixing that term alone would not solve the apparatus correlations or
+material-dependent biases. The source-density assignment for the mixed
+NIST consensus is invalid even if one configuration carries more statistical
+weight. A new regression would need a response model for the actual mixture.
+
+The historical 12-row dataset and regression scripts are retained for
+provenance; the other experiments' source materials and revisions have not
+been re-audited in this step. Their fitted values and the ``stronger than
+solar'' comparison are therefore removed from the current evidence tables.
+No replacement multi-experiment inference is claimed. The retained four-row
+source check is identified explicitly rather than called a verification of
+all historical data.
+
+\section{Empirical next steps and conclusion}
+A useful force test specifies source and test-body geometry, measured material
+properties, calibration, environmental fields and the covariance of the
+measurements. A material swap can reduce apparatus differences but does not
+by itself isolate density: source mass, surface properties, temperature and
+method-dependent torques can also change. A model for these effects can be
+compared directly with data; outside endorsement is not a prerequisite.
+The present audit corrects arithmetic and provenance and leaves the
+phenomenological force hypothesis testable. It establishes neither a detection,
+a calibrated exclusion nor a scalar completion of the operator theory.
+\section*{Code and revision availability}
+Producing scripts, inputs, saved results and numerical audit evidence are
+publicly available in the \href{https://github.com/chrismerrill1974/solarcore_code/tree/main/reproduction}{shared RDT reproducibility archive}.
+The accompanying source package, \nolinkurl{merrill2026_terrestrial_g_code}, includes the
+manuscript, dependencies and resource-controlled reproduction commands.
+Its \texttt{reproduction/CAPSULE.json} records file hashes;
+\texttt{reproduce.py} verifies the package and rebuilds the paper from retained
+scientific outputs. Full scientific runs are separate from this saved-result
+reproduction. Historical scripts and results remain separately identified.
+
+\section*{Acknowledgments}
+Developed with computational collaboration from Claude (Anthropic) and
+Astra (Open AI). Earlier claims and calculations remain identifiable in the
+repository history; this revision supersedes their interpretation.
+\begin{thebibliography}{9}
+\bibitem{NIST} S.~Schlamminger et al., ``Redetermination of the gravitational
+constant with the BIPM torsion balance at NIST,'' Metrologia
+\textbf{63}, 025012 (2026),
+\href{https://doi.org/10.1088/1681-7575/ae570f}{doi:10.1088/1681-7575/ae570f},
+Tables 16 and 18.
+\bibitem{Series_companion} C.~K.~Merrill, Claude (Anthropic), and Astra (Open AI),
+``A Scalar-Tensor Companion to Radial Dimensionality Theory: A Chameleon Model Reproducing the Density Law, with Gravitational-Wave Predictions,''
+revised version, November 12, 2026.
+
+\bibitem{Series_paper1} C.~K.~Merrill, Claude (Anthropic), and Astra (Open AI),
+``Radial Dimensionality Theory I: Solar Neutrino and Helioseismic Constraints on Density-Dependent Spatial Dimensionality,''
+revised version, November 12, 2026.
+
+\bibitem{Series_paper6} C.~K.~Merrill, Claude (Anthropic), and Astra (Open AI),
+``Radial Dimensionality Theory VI: A Field-Theoretic Origin for the Density-Dependent Gravitational Coupling,''
+revised version, November 12, 2026.
+
+\end{thebibliography}
+\end{document}
